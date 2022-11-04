@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+:root {
+  --primary-color: #F7DD43;
+}
+body * {
+  font-family: 'roboto', sans-serif;
+}
+body {
+  background-color: #121214;
+  background-image: url(./assets/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#app{
+  /* border: 1px solid red; */
+  width: fit-content; /* encaixa todo o conteúdo na caixa */
+  margin: 52px auto;
+  text-align: center;
+}
+header {
+  margin-bottom: 63px;
+}
+.card {
+  background-color: #1D1C19;
+  width: 290px;
+  padding: 32px 23px;
+  border-radius: 6px;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 30px;
+}
+.card h2 {
+  color: var(--primary-color);
+  border: 1px solid #746615;
+  border-radius: 6px;
+  padding: 8px;
+  width: fit-content;
+  margin-inline: auto; /* inline: manipula só o eixo x */
+  margin-bottom: 53px;
+}
+.card span {
+  color: #E1E1E6;
+  font-size: 14px;
+  text-transform: uppercase; 
+}
+
+.card ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.card ul li + li {
+  padding-top: 20px;
+  border-top: 1px solid #323238;
+}
+.card ul li strong {
+  color: #E1E1E6;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 125%;
+}
+
+/* animations */
+
+.card ul li strong:hover,
+.card ul li img:hover {
+  transform: scale(1.1);
+  transition: transform .4s;
+}
+
+/* responsive */
+
+@media (min-width: 700px) {
+  #cards {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+}
